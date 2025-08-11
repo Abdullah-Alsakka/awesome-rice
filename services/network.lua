@@ -8,7 +8,7 @@ local gears = require("gears")
 local network_service = {
     config = {
         interval = 2,
-        interface = "enp6s0",
+        interface = "enp3s0",
     },
     last_data = {
         time = 0,

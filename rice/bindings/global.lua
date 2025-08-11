@@ -499,4 +499,13 @@ if config.features.magnifier_tools then
         table.unpack(global_bindings) }
 end
 
+awful.key({}, "XF86MonBrightnessUp", function() 
+    require("services.brightness").increase()
+end, {description = "increase brightness", group = "hotkeys"}),
+
+awful.key({}, "XF86MonBrightnessDown", function() 
+    require("services.brightness").decrease()
+end, {description = "decrease brightness", group = "hotkeys"}),
+
+
 return global_bindings

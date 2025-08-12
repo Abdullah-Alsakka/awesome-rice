@@ -10,6 +10,19 @@ local menu_templates = require("ui.menu.templates")
 local app_menu = require("rice.apps").menu
 local dpi = Dpi
 
+local menu = {}
+
+local applications   = require("ui.menu.templates.applications")
+local client_switcher = require("ui.menu/client_switcher")
+local layout_switcher = require("ui.menu/layout_switcher")
+local search          = require("ui.menu.search")  -- new search tab module
+
+menu.tabs = {
+    { name = "Applications", widget = applications },
+    { name = "Search",       widget = search.widget },
+    { name = "Clients",      widget = client_switcher },
+    { name = "Layout",       widget = layout_switcher },
+}
 
 return mebox {
     item_width = dpi(192),
